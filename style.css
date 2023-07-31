@@ -2,21 +2,42 @@
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: rgb(190, 224, 243);
+    font-family: serif;
 }
 
 .calculator {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: pink;
+    border: 2px solid black;
+    width: 600px;
+    height: 800px;
 }
 
 .name {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: bold;
+    font-size: 36px;
 }
 
 .display {
-
+    width: 400px;
+    height: 80px;
+    border: 2px solid black;
+    background-color: white;
 }
 
 .buttons {
-    
+
+}
+
+button {
+    font-size: 30px;
 }
