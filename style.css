@@ -13,12 +13,13 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgb(238, 160, 218);
+    background-color: rgb(238, 139, 213);
     border: 2px solid black;
     width: 500px;
     height: 650px;
     margin-top: 40px;
     padding: 0;
+    min-width: 500px;
 }
 
 .name {
@@ -70,28 +71,28 @@ button {
 }
 
 .row1 button {
-    background-color: purple;
+    background-color: rgb(238, 108, 238);
 }
 
 .row2 button {
-    background-color: blue;
+    background-color: rgb(116, 116, 238);
 }
 
 .row3 button {
-    background-color: green;
+    background-color: rgb(109, 240, 109);
 }
 
 .row4 button {
-    background-color: yellow;
+    background-color: rgb(241, 241, 108);
 }
 
 .row5 button {
-    background-color: red;
+    background-color: rgb(245, 103, 103);
 }
 
 #add,
 #subtract,
 #multiply,
 #divide {
-    background-color: orange
+    background-color: rgb(248, 198, 105)
 }
