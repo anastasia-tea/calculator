@@ -12,10 +12,10 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: pink;
+    background-color: rgb(238, 160, 218);
     border: 2px solid black;
-    width: 600px;
-    height: 800px;
+    width: 500px;
+    height: 700px;
 }
 
 .name {
@@ -24,7 +24,8 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 48px;
+    flex-wrap: wrap;
 }
 
 .display {
@@ -35,9 +36,37 @@ body {
 }
 
 .buttons {
-
+    
 }
 
 button {
-    font-size: 30px;
+    font-size: 36px;
+    border: 2px solid black;
+}
+
+.row1 button {
+    background-color: purple;
+}
+
+.row2 button {
+    background-color: blue;
+}
+
+.row3 button {
+    background-color: green;
+}
+
+.row4 button {
+    background-color: yellow;
+}
+
+.row5 button {
+    background-color: red;
+}
+
+#add,
+#subtract,
+#multiply,
+#divide {
+    background-color: orange
 }
