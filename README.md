@@ -4,6 +4,8 @@ This is the Odin Project Foundation's final project, the Calculator!
 
 After starting and restarting this program a number of times during my CS degree, it feels very meaningful to see how far I've come!
 
+Completed on July 31st, 2023.
+
 Appearance inspired by:
 -https://www.alibaba.com/product-detail/colorful-keys-solar-desktop-calculator-with_60185160895.html
 
