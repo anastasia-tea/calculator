@@ -49,11 +49,20 @@ h4 {
     border-radius: 15px;
 }
 
+#previous,
 #screen {
     font-size: 20px;
     padding: 6px;
     display: flex;
     justify-content: flex-end;
+}
+
+#previous {
+    align-items: flex-start;
+}
+
+#screen {
+    align-items: flex-end;
 }
 
 .buttons {
@@ -78,7 +87,7 @@ button {
 }
 
 #clear,
-#delete {
+#del {
     width: 185px;
 }
 

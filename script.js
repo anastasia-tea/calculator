@@ -4,23 +4,24 @@ const operations = document.querySelectorAll(".operation");
 const point = document.querySelector("#point");
 const equals = document.querySelector("#equals");
 
-const del = document.querySelector("#delete");
+const del = document.querySelector("#del");
 const clear = document.querySelector("#clear");
 
+const prev = document.querySelector("#previous");
 const screen = document.querySelector("#screen");
 
 //
 
 point.addEventListener("click", inputPoint);
-equals.addEventListener("click", display);
-//del.addEventListener("click");
+equals.addEventListener("click", solve);
+del.addEventListener("click", backspace);
 clear.addEventListener("click", clearScreen);
 
 //
 
 let operand1 = "";
 let operand2 = "";
-let operation = "";
+let op = "";
 
 //
 
@@ -37,19 +38,11 @@ operations.forEach(function(op) {
 });
 
 function round(number) {
-    let result = number.toFixed(4);
-    return result;
+    return Math.round(number * 100) / 100;
 }
 
 function inputDigit(digit) {
     screen.textContent += digit;
-}
-
-function inputOperation(op) {
-    if (operation === "") {
-        operation = op;
-        screen.textContent += op;
-    }
 }
 
 function inputPoint() {
@@ -61,18 +54,30 @@ function inputPoint() {
     }
 }
 
-function backspace() {
+function inputOperation(operation) {
+    operand1 = screen.textContent;
+    op = operation;
+    prev.textContent = `${operand1} ${op}`;
+    screen.textContent = "";
+}
 
+function solve() {
+    operand2 = screen.textContent;
+    screen.textContent = operate(op, operand1, operand2);
+    prev.textContent = `${operand1} ${op} ${operand2}`;
+}
+
+function backspace() {
+    screen.textContent = screen.textContent.slice(0, -1);
 }
 
 function clearScreen() {
-    screen.textContent = "";
     operand1 = "";
     operand2 = "";
-    operation = "";
+    op = "";
+    prev.textContent = "";
+    screen.textContent = "";
 }
-
-//
 
 function add(x, y) {
     let result = round(x + y);
@@ -97,23 +102,19 @@ function divide(x, y) {
     return result;
 }
 
-function operate(op, x, y) {
+function operate(operation, x, y) {
     x = parseFloat(x);
     y = parseFloat(y);
     
-    if (op === "+") {
+    if (operation === "+") {
         return add(x, y);
-    } else if (op === "-") {
+    } else if (operation === "-") {
         return subtract(x, y);
-    } else if (op === "*") {
+    } else if (operation === "*") {
         return multiply(x, y);
-    } else if (op === "÷") {
+    } else if (operation === "÷") {
         return divide(x, y);
     } else {
         return "Error!";
     }
-}
-
-function display() {
-
 }
